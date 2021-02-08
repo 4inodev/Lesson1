@@ -20,8 +20,11 @@ public class MainActivity extends AppCompatActivity {
         second.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent myIntent = new Intent(MainActivity.this, SecondActivity.class);
-                startActivityForResult(myIntent, 75);
+                int x = 3;
+                int y = x * 14;
+                Intent secondActIntent = new Intent(MainActivity.this, SecondActivity.class);
+                secondActIntent.putExtra("dasdas", "sdasda" +  y);
+                startActivityForResult(secondActIntent, 75);
             }
         });
     }
