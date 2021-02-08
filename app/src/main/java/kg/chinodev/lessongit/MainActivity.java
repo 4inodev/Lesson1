@@ -27,5 +27,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivityForResult(secondActIntent, 75);
             }
         });
+        System.out.println("Go!");
     }
 }
