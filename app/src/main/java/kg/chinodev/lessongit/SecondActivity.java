@@ -8,21 +8,19 @@ import android.view.View;
 import android.widget.Button;
 
 public class SecondActivity extends AppCompatActivity {
-    Button thirdButton;
-
+    Button third;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
-        thirdButton = findViewById(R.id.third_button);
+        third = findViewById(R.id.third_button);
 
-        thirdButton.setOnClickListener(new View.OnClickListener() {
+        third.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(SecondActivity.this, ThirdActivity.class);
-                intent.putExtra( "name", "Ainuska");
-                startActivityForResult(intent, 1111 );
+                startActivity(intent);
             }
         });
     }
